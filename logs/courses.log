@@ -1,0 +1,10 @@
+INFO 2024-11-23 13:29:34,359 courses New course created: IT Audit, instructor: teacher@example.com
+INFO 2024-11-23 13:29:34,369 courses.views User 1 is attempting to delete course 1.
+INFO 2024-11-23 13:29:34,373 courses Course deleted: IT Audit, instructor: teacher@example.com
+INFO 2024-11-23 13:29:34,373 courses.views Course 1 successfully deleted by user 1.
+INFO 2024-11-23 13:29:34,378 courses Course updated: Advanced Django, instructor: teacher@example.com
+INFO 2024-11-23 13:31:43,386 courses New course created: IT Audit, instructor: teacher@example.com
+INFO 2024-11-23 13:31:43,391 courses.views User 1 is attempting to delete course 1.
+INFO 2024-11-23 13:31:43,394 courses Course deleted: IT Audit, instructor: teacher@example.com
+INFO 2024-11-23 13:31:43,394 courses.views Course 1 successfully deleted by user 1.
+INFO 2024-11-23 13:31:43,399 courses Course updated: Advanced Django, instructor: teacher@example.com
