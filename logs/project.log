@@ -1,0 +1,178 @@
+WARNING 2024-11-17 09:41:25,914 log Not Found: /
+WARNING 2024-11-17 09:41:25,915 basehttp "GET / HTTP/1.1" 404 3397
+INFO 2024-11-17 09:41:33,789 basehttp "GET /api/students/ HTTP/1.1" 200 5373
+INFO 2024-11-17 09:42:47,327 autoreload C:\Users\Биболат\Desktop\Lab2_django\StudentManagementSystem\students\urls.py changed, reloading.
+INFO 2024-11-17 09:42:48,056 autoreload Watching for file changes with StatReloader
+INFO 2024-11-17 09:42:49,949 basehttp "GET /api/students/ HTTP/1.1" 200 5373
+INFO 2024-11-17 09:43:19,839 basehttp "GET /api/students/profiles/ HTTP/1.1" 200 12415
+INFO 2024-11-17 09:43:35,297 basehttp "GET /api/students/profiles/profile HTTP/1.1" 301 0
+INFO 2024-11-17 09:43:35,319 basehttp "GET /api/students/profiles/profile/ HTTP/1.1" 200 11576
+WARNING 2024-11-17 09:49:20,907 log Not Found: /api/stu
+WARNING 2024-11-17 09:49:20,909 basehttp "GET /api/stu HTTP/1.1" 404 5649
+INFO 2024-11-17 09:49:28,331 basehttp "GET /api/grades/ HTTP/1.1" 200 5448
+WARNING 2024-11-17 09:49:45,719 log Not Found: /api/grades/as
+WARNING 2024-11-17 09:49:45,720 basehttp "GET /api/grades/as HTTP/1.1" 404 7265
+INFO 2024-11-17 09:50:02,512 basehttp "GET /api/grades/ HTTP/1.1" 200 5448
+INFO 2024-11-17 09:50:07,564 basehttp "GET /api/ HTTP/1.1" 200 5319
+WARNING 2024-11-17 09:50:19,554 log Not Found: /api/attendance
+WARNING 2024-11-17 09:50:23,981 log Not Found: /api/attendance/
+WARNING 2024-11-17 09:50:29,196 log Not Found: /attendance/
+WARNING 2024-11-17 09:50:29,197 basehttp "GET /attendance/ HTTP/1.1" 404 5054
+INFO 2024-11-17 09:50:34,477 basehttp "GET /attendance/course/1/ HTTP/1.1" 200 44
+INFO 2024-11-17 10:03:14,881 autoreload Watching for file changes with StatReloader
+INFO 2024-11-17 10:03:17,703 basehttp "GET /attendance/course/1/ HTTP/1.1" 200 44
+WARNING 2024-11-17 10:03:20,662 log Not Found: /attendance/course/
+WARNING 2024-11-17 10:03:20,663 basehttp "GET /attendance/course/ HTTP/1.1" 404 5075
+INFO 2024-11-17 10:03:26,123 basehttp "GET /attendance/course/1/ HTTP/1.1" 200 44
+INFO 2024-11-17 10:03:41,477 basehttp "GET /api/users/auth/ HTTP/1.1" 200 5465
+INFO 2024-11-17 10:03:48,366 basehttp "GET /api/users/auth/users/me/ HTTP/1.1" 200 11345
+WARNING 2024-11-17 10:03:57,165 log Bad Request: /api/users/auth/users/me/
+WARNING 2024-11-17 10:03:57,165 basehttp "DELETE /api/users/auth/users/me/ HTTP/1.1" 400 11332
+WARNING 2024-11-17 10:04:10,266 log Bad Request: /api/users/auth/users/me/
+WARNING 2024-11-17 10:04:10,266 basehttp "DELETE /api/users/auth/users/me/ HTTP/1.1" 400 11332
+INFO 2024-11-17 10:04:12,696 basehttp "PUT /api/users/auth/users/me/ HTTP/1.1" 200 11345
+INFO 2024-11-17 12:39:34,250 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-17 12:39:40,944 log Not Found: /
+WARNING 2024-11-17 12:39:40,944 basehttp "GET / HTTP/1.1" 404 3397
+WARNING 2024-11-17 12:39:41,112 log Not Found: /favicon.ico
+WARNING 2024-11-17 12:39:41,113 basehttp "GET /favicon.ico HTTP/1.1" 404 3448
+INFO 2024-11-17 12:39:47,548 basehttp "GET /admin/ HTTP/1.1" 200 10621
+INFO 2024-11-17 12:39:47,557 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,560 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,561 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,563 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,565 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,567 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,569 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,575 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:47,576 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-11-17 12:39:51,284 basehttp "GET /admin/students/student/ HTTP/1.1" 200 15191
+INFO 2024-11-17 12:39:51,333 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2024-11-17 12:40:41,824 basehttp "POST /admin/students/student/4/change/ HTTP/1.1" 500 195909
+INFO 2024-11-17 12:40:43,192 basehttp "GET /admin/students/student/4/change/ HTTP/1.1" 200 15178
+INFO 2024-11-17 12:41:18,459 basehttp "GET /admin/grades/grade/ HTTP/1.1" 200 12098
+INFO 2024-11-17 12:41:18,469 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-17 12:41:30,606 basehttp "GET /admin/grades/grade/?teacher__id__exact=4 HTTP/1.1" 200 12382
+INFO 2024-11-17 12:41:30,617 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-17 12:41:38,143 basehttp "GET /admin/courses/course/ HTTP/1.1" 200 13543
+INFO 2024-11-17 12:41:38,152 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-17 12:41:40,698 basehttp "GET /admin/courses/course/2/change/ HTTP/1.1" 200 13206
+INFO 2024-11-17 12:41:40,709 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2024-11-17 12:55:07,838 log Not Found: /
+WARNING 2024-11-17 12:55:07,839 basehttp "GET / HTTP/1.1" 404 3397
+WARNING 2024-11-17 12:55:20,114 log Not Found: /
+WARNING 2024-11-17 12:55:20,115 basehttp "GET / HTTP/1.1" 404 3397
+WARNING 2024-11-17 12:55:20,277 log Not Found: /favicon.ico
+WARNING 2024-11-17 12:55:20,277 basehttp "GET /favicon.ico HTTP/1.1" 404 3448
+INFO 2024-11-17 12:55:24,275 basehttp "GET /admin/ HTTP/1.1" 200 10621
+INFO 2024-11-17 12:55:27,926 basehttp "GET /admin/students/student/ HTTP/1.1" 200 15191
+INFO 2024-11-17 12:55:27,939 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-11-17 13:08:24,833 autoreload Watching for file changes with StatReloader
+WARNING 2024-11-17 13:08:37,178 log Not Found: /
+INFO 2024-11-17 13:08:40,576 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2024-11-17 13:08:40,586 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2024-11-17 13:08:43,836 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4326
+WARNING 2024-11-17 13:08:55,433 log Not Found: /
+WARNING 2024-11-17 13:08:55,433 basehttp "GET / HTTP/1.1" 404 3397
+INFO 2024-11-17 13:09:00,452 basehttp "GET /api/users/auth/ HTTP/1.1" 200 5431
+INFO 2024-11-17 13:09:13,503 basehttp "GET /api/ HTTP/1.1" 200 5285
+INFO 2024-11-18 09:41:25,914 New user registered: user@example.com
+INFO 2024-11-18 09:41:33,789 User logged in: user@example.com
+INFO 2024-11-18 09:42:47,327 User logged out: user@example.com
+INFO 2024-11-18 13:45:31,543 students User admin requested student profiles.
+INFO 2024-11-18 13:46:06,276 students User admin created a student profile.
+INFO 2024-11-18 13:47:01,875 attendance User admin marked attendance for Course ID 1.
+INFO 2024-11-18 14:24:54,280 students User 1 accessed their profile.
+INFO 2024-11-18 14:25:51,508 students User 1 updated their profile.
+INFO 2024-11-18 14:27:27,762 students Cache miss for student profile 2. Fetching from database.
+INFO 2024-11-18 14:27:31,458 students Cache hit for student profile 2.
+INFO 2024-11-18 14:31:37,354 students Filtering students: {'name': 'Bibolat', 'course': '3'}
+INFO 2024-11-18 14:31:57,531 students Pagination requested: Page 2
+INFO 2024-11-18 14:41:25,914 Attendance record created for student: student@example.com, date: 2024-11-18
+INFO 2024-11-18 14:42:33,789 New course created: Python Programming, instructor: instructor@example.com
+INFO 2024-11-18 14:43:45,321 Grade updated for student: student@example.com, course: Python Programming, grade: A
+INFO 2024-11-19 09:04:54,234 user_registration New user registered: user@example.com
+INFO 2024-11-19 09:05:15,487 user_login User logged in: user@example.com
+INFO 2024-11-19 09:08:47,642 user_logout User logged out: user@example.com
+INFO 2024-11-19 09:15:52,503 students User admin requested student profiles
+ERROR 2024-11-19 09:17:30,102 students 404 Not Found: Student profile not found for student ID 6
+INFO 2024-11-19 09:18:02,235 students User admin created a student profile for student 1
+INFO 2024-11-19 09:25:33,987 attendance Attendance created successfully
+INFO 2024-11-19 10:00:05,112 students User 1 accessed their profile
+INFO 2024-11-19 10:02:33,543 students User 1 updated their profile with new information
+INFO 2024-11-19 10:07:18,102 students Cache miss for student profile 2. Fetching from database
+ERROR 2024-11-19 10:08:41,432 students 404 Not Found: Failed to fetch student profile 2 from the database
+INFO 2024-11-19 10:11:29,786 students Cache hit for student profile 2
+INFO 2024-11-19 10:14:34,984 students Filtering students by name: {'name': 'Bibolat', 'course': '3'}
+INFO 2024-11-19 10:15:07,378 students Pagination requested for Page 3
+INFO 2024-11-19 11:08:52,110 attendance Attendance record created for student: student@example.com, date: 2024-11-19
+INFO 2024-11-19 11:11:03,321 courses New course created: Python Programming, instructor: instructor@example.com
+ERROR 2024-11-19 11:13:45,312 courses 404 Not Found: Course ID 10 not found while adding student enrollment
+INFO 2024-11-19 11:15:33,455 grades Grade updated for student: student@example.com, course: Python Programming, grade: A
+INFO 2024-11-19 11:18:22,102 students User admin searched for students by name and course
+INFO 2024-11-19 11:21:09,788 attendance Attendance marked for student: student@example.com, date: 2024-11-19
+INFO 2024-11-19 12:28:36,543 students Student profile data cached for student 1
+INFO 2024-11-19 12:29:51,642 courses Course enrollment added for student: student@example.com, course: Java Programming
+INFO 2024-11-19 12:31:14,532 attendance Attendance updated for student: student@example.com, course: Data Science, date: 2024-11-19
+INFO 2024-11-19 12:35:01,234 courses New course created: Web Development, instructor: instructor2@example.com
+INFO 2024-11-19 13:05:42,543 students User 2 accessed their profile
+INFO 2024-11-19 13:15:28,876 students User 2 updated their profile with new contact information
+INFO 2024-11-19 13:21:48,102 grades Grade updated for student: student@example.com, course: Web Development, grade: A-
+INFO 2024-11-19 13:55:10,234 attendance Attendance record marked for student: student@example.com, course: Web Development, date: 2024-11-19
+INFO 2024-11-19 14:03:33,876 students User 2 viewed student profiles for course ID 3
+INFO 2024-11-19 14:18:45,543 students User admin removed student 3 from course: Python Programming
+INFO 2024-11-19 14:19:21,234 attendance Attendance marked for student: student@example.com, course: Data Science, date: 2024-11-19
+INFO 2024-11-19 14:19:49,543 students User admin added student 4 to course: Data Science
+INFO 2024-11-19 14:21:04,876 grades Grade updated for student: student@example.com, course: Data Structures, grade: B+
+INFO 2024-11-19 14:22:21,321 attendance Attendance record created for student: student@example.com, course: Data Science, date: 2024-11-19
+INFO 2024-11-19 15:23:36,432 courses New course created: Data Structures, instructor: instructor@example.com
+INFO 2024-11-19 15:24:14,543 students Student profile data cached for student 2
+INFO 2024-11-19 15:24:38,543 students User 3 accessed their profile
+INFO 2024-11-19 15:25:33,321 attendance Attendance updated for student: student@example.com, course: Web Development, date: 2024-11-19
+INFO 2024-11-19 16:25:50,432 students User 3 updated their profile with a new biography
+INFO 2024-11-19 16:26:42,543 courses New course created: Machine Learning, instructor: instructor@example.com
+INFO 2024-11-19 16:22:07,876 grades Grade updated for student: student@example.com, course: Data Science, grade: A
+INFO 2024-11-19 16:23:25,543 attendance Attendance marked for student: student@example.com, course: Data Science, date: 2024-11-19
+INFO 2024-11-19 17:06:12,234 students User admin removed student 2 from course: Machine Learning
+INFO 2024-11-19 17:15:02,543 students User admin requested student profiles for course ID 4
+INFO 2024-11-19 17:16:33,876 grades Grade updated for student: student@example.com, course: Machine Learning, grade: B
+INFO 2024-11-19 17:17:12,543 students User 4 updated their profile with new contact details
+INFO 2024-11-19 17:17:40,321 attendance Attendance marked for student: student@example.com, course: Data Structures, date: 2024-11-19
+INFO 2024-11-19 18:03:10,432 courses Course enrollment added for student: student@example.com, course: Data Science
+INFO 2024-11-19 18:03:45,543 grades Grade updated for student: student@example.com, course: Web Development, grade: A-
+INFO 2024-11-19 18:04:12,543 students User 3 accessed their profile page for the first time
+INFO 2024-11-19 18:05:05,321 attendance Attendance updated for student: student@example.com, course: Machine Learning, date: 2024-11-19
+INFO 2024-11-19 18:05:53,432 students User 4 updated their profile with new personal details
+INFO 2024-11-19 19:06:15,876 courses New course created: Artificial Intelligence, instructor: instructor@example.com
+INFO 2024-11-19 19:06:25,543 students User admin requested list of students enrolled in Web Development
+INFO 2024-11-19 19:07:02,543 students Student profile data cached for student 3
+INFO 2024-11-19 19:07:15,876 attendance Attendance updated for student: student@example.com, course: Data Structures, date: 2024-11-19
+INFO 2024-11-19 19:07:40,321 courses Course enrollment completed for student: student@example.com, course: Data Structures
+INFO 2024-11-19 19:08:12,543 grades Grade added for student: student@example.com, course: Machine Learning, grade: A
+INFO 2024-11-19 19:11:40,876 students User 4 accessed their profile for the second time
+INFO 2024-11-19 19:15:12,543 courses Course enrollment added for student: student@example.com, course: Java Programming
+INFO 2024-11-20 09:02:38,234 user_registration New user registered: user@example.com  
+INFO 2024-11-20 09:05:12,345 user_login User logged in: user@example.com  
+INFO 2024-11-20 09:15:20,567 grade_update Grade updated: Student ID 3, Course ID 5, Old Score: 85, New Score: 90  
+INFO 2024-11-20 09:18:33,892 grade_creation A new grade has been added for the student: student@example.com, course: Math 101, grade: 95  
+WARNING 2024-11-20 09:20:45,123 student_profile Student profile not found for user ID 7.  
+INFO 2024-11-20 09:23:58,456 student_profile_cache Cache updated for student profile 7.  
+INFO 2024-11-20 09:25:10,789 student_profile Cache hit for student profile 7.  
+INFO 2024-11-20 09:31:25,001 user_logout User logged out: user@example.com  
+ERROR 2024-11-20 09:33:15,678 profile_update Error updating profile for user ID 5: {'email': ['This field is required.']}  
+INFO 2024-11-20 09:34:47,890 role_assignment Role updated to 'teacher' for user teacher3@example.com  
+INFO 2024-11-20 09:38:21,345 grade_deletion The grade has been deleted for the student: student@example.com, course: History 101  
+INFO 2024-11-20 09:50:10,567 student_list Pagination requested for page 2.
+INFO 2024-11-21 20:07:04,274  test_setup Creating test data for Attendance API tests.
+WARNING 2024-11-21 20:07:07,197 auth Teacher login request received.
+WARNING 2024-11-21 20:07:08,198 auth Student login request received.
+WARNING 2024-11-21 20:07:08,423 auth Admin login request received.
+WARNING 2024-11-21 20:07:08,424 basehttp test_setup Test setup complete.
+INFO 2024-11-21 20:07:13,121 teacher_mark_attendance Teacher (id=1) is attempting to mark attendance for student (id=2) in course (id=1) on 2024-11-21.
+INFO 2024-11-21 20:07:13,320 teacher_mark_attendance Attendance marked successfully for student (id=2) in course (id=1).
+INFO 2024-11-21 20:07:13,337 student_view_attendance Student (id=2) requested attendance details for record (id=1).
+INFO 2024-11-21 20:07:13,341 student_view_attendance Attendance details retrieved successfully for record (id=1).
+INFO 2024-11-21 20:07:13,341 admin_view_all_attendance Admin (id=3) requested all attendance records.
+INFO 2024-11-21 20:07:13,343 admin_view_all_attendance Total 1 attendance records retrieved successfully.
+WARNING 2024-11-21 21:37:20,185 log Unauthorized: /api/users/auth/
+INFO 2024-11-23 14:41:49,567 project User 1 is attempting to delete course 1.

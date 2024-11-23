@@ -9,7 +9,7 @@ from courses.models import Course
 import logging
 from rest_framework import viewsets
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('project')
 
 class AttendanceListView(APIView):
     """

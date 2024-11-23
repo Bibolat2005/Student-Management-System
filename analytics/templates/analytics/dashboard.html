@@ -1,0 +1,15 @@
+<h1>Analytics Dashboard</h1>
+
+<h2>Most Active Users</h2>
+<ul>
+  {% for user in active_users %}
+    <li>{{ user.user.email }} - {{ user.request_count }} requests</li>
+  {% endfor %}
+</ul>
+
+<h2>Most Popular Courses</h2>
+<ul>
+  {% for course in popular_courses %}
+    <li>{{ course.course.name }} - {{ course.view_count }} views</li>
+  {% endfor %}
+</ul>

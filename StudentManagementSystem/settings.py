@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'users',
+    'analytics',
     'djoser',
     'rest_framework.authtoken',
     'students',
@@ -68,6 +69,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 
+
 }
 
 CACHES = {
@@ -91,43 +93,52 @@ LOGGING = {
             'style': '{',
         },
     },
+
     'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/project.log'),
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
+        },
         'file_grades': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/grades.log',
+            'filename': os.path.join(BASE_DIR, 'logs/grades.log'),
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
         'file_attendance': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/attendance.log',
+            'filename': os.path.join(BASE_DIR, 'logs/attendance.log'),
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
         'file_courses': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/courses.log',
+            'filename': os.path.join(BASE_DIR, 'logs/courses.log'),
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
         'file_students': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/students.log',
+            'filename': os.path.join(BASE_DIR, 'logs/students.log'),
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
         'file_users': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/users.log',
+            'filename': os.path.join(BASE_DIR, 'logs/users.log'),
             'formatter': 'verbose',
             'encoding': 'utf-8',
         },
     },
+
     'loggers': {
         'grades': {
             'handlers': ['file_grades'],
@@ -154,8 +165,47 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False,
         },
+        'project': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
     },
 }
+
+
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': '{levelname} {asctime} {module} {message}',
+#             'style': '{',
+#         },
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'logs/project.log'),
+#             'formatter': 'verbose',
+#             'encoding': 'utf-8',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#         'project': {
+#             'handlers': ['file'],
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#     },
+# }
 
 
 
@@ -204,6 +254,29 @@ DJOSER = {
         'user': 'users.serializers.CustomUserSerializer',
     },
 }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'main_db',
+        'USER': 'main_user',
+        'PASSWORD': 'main_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
+    'analytics': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'analytics_db',
+        'USER': 'analytics_user',
+        'PASSWORD': 'analytics_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
+    },
+}
+
+
+DATABASE_ROUTERS = ['analytics.db_router.AnalyticsRouter']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

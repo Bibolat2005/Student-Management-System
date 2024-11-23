@@ -22,7 +22,7 @@ from .serializers import StudentSerializer
 class StudentPagination(PageNumberPagination):
     page_size = 10
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('project')
 
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()

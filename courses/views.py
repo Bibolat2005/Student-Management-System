@@ -17,7 +17,7 @@ from .serializers import CourseSerializer, EnrollmentSerializer
 from users.permissions import IsAdmin, IsTeacher
 import django_filters
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('project')
 
 class CourseCreateView(APIView):
     @swagger_auto_schema(

@@ -8,7 +8,7 @@ from django.core.cache import cache
 import time
 from rest_framework.permissions import BasePermission
 
-logger = logging.getLogger('project')
+logger = logging.getLogger('course')
 
 class IsTeacherOrAdmin(BasePermission):
     def has_permission(self, request, view):
