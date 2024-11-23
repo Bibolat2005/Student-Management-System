@@ -1,65 +1,84 @@
 from celery import shared_task
 from django.core.mail import send_mail
-from django.utils.timezone import now
+from django.utils import timezone
+from users.models import CustomUser
 from students.models import Student
 from grades.models import Grade
 from attendance.models import Attendance
 
 @shared_task
-def daily_attendance_reminder():
-    students = Student.objects.all()
-    for student in students:
+def send_attendance_reminder_to_students():
+    students_list = CustomUser.objects.filter(role='student')
+    for student in students_list:
         send_mail(
-            'Daily Attendance Reminder',
-            'Please mark your attendance for today.',
-            'noreply@example.com',
-            [student.user.email],
+            'Attendance Reminder',
+            'Please ensure you mark your attendance for today.',
+            'system@kbtu.kz',
+            [student.email],
             fail_silently=False,
         )
-    return f"Sent reminders to {students.count()} students."
 
 @shared_task
-def grade_update_notification(student_id, course_name, grade):
-    student = Student.objects.get(id=student_id)
+def notify_grade_update(student_email, course_title, new_grade):
+    subject = f'Updated Grade for {course_title}'
+    message = f'Your grade for {course_title} has been updated to {new_grade}.'
+    
     send_mail(
-        'Grade Update Notification',
-        f'Your grade for {course_name} has been updated to {grade}.',
-        'noreply@example.com',
-        [student.user.email],
+        subject,
+        message,
+        'system@kbtu.kz',
+        [student_email],
         fail_silently=False,
     )
-    return f"Notified {student.user.email} about grade update."
 
 @shared_task
-def daily_report():
-    attendance_count = Attendance.objects.filter(date=now().date()).count()
-    grades_count = Grade.objects.filter(date=now().date()).count()
-    send_mail(
-        'Daily Report',
-        f'Today, {attendance_count} attendance records and {grades_count} grades were processed.',
-        'noreply@example.com',
-        ['admin@example.com'],
-        fail_silently=False,
-    )
-    return f"Daily report sent."
-
-@shared_task
-def weekly_performance_email():
-    students = Student.objects.all()
-    for student in students:
-        attendance = Attendance.objects.filter(student=student).count()
-        grades = Grade.objects.filter(student=student)
-        grade_summary = "\n".join([f"{g.course.name}: {g.grade}" for g in grades])
-        email_body = (
-            f"Weekly Performance Summary\n\n"
-            f"Attendance Count: {attendance}\n"
-            f"Grades:\n{grade_summary}"
-        )
+def send_performance_summary():
+    students_list = CustomUser.objects.filter(role='student')
+    for student in students_list:
+        grades = Grade.objects.filter(student__user=student)
+        performance_message = 'Here is a summary of your current grades:\n'
+        
+        for grade in grades:
+            performance_message += f'{grade.course.name}: {grade.grade}\n'
+        
         send_mail(
             'Weekly Performance Summary',
-            email_body,
-            'noreply@example.com',
-            [student.user.email],
+            performance_message,
+            'system@kbtu.kz',
+            [student.email],
             fail_silently=False,
         )
-    return f"Weekly performance emails sent to {students.count()} students."
+
+@shared_task
+def generate_daily_report_for_admins():
+    current_date = timezone.now().date()
+    all_students = Student.objects.all()
+
+    daily_report_data = []
+
+    for student in all_students:
+        attendance_record = Attendance.objects.filter(student=student, date=current_date).first()
+        attendance_status = attendance_record.status if attendance_record else 'No Data Available'
+
+        student_grades = Grade.objects.filter(student=student)
+
+        student_info = f"Name: {student.user.get_full_name()}\n" \
+                       f"Email: {student.user.email}\n" \
+                       f"Attendance: {attendance_status}\n" \
+                       f"Grades: "
+        
+        for grade in student_grades:
+            student_info += f'{grade.course.name}: {grade.grade}\n'
+        
+        daily_report_data.append(student_info)
+
+    report_subject = f'Daily Report for {current_date.strftime("%d.%m.%Y")}'
+    recipients = [admin.email for admin in CustomUser.objects.filter(role='admin')]
+
+    send_mail(
+        report_subject,
+        '\n'.join(daily_report_data),
+        'system@kbtu.kz',
+        recipients,
+        fail_silently=False,
+    )

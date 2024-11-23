@@ -8,7 +8,7 @@ from django.core.cache.utils import make_template_fragment_key
 class Student(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, verbose_name="First Name")
-    dob = models.DateField(verbose_name="Date of Birth")
+    dob = models.DateField(null=False, default='2000-01-01')
     is_active = models.BooleanField(default=True, verbose_name="Active Student")
     registration_date = models.DateTimeField(auto_now_add=True, verbose_name="Registration Date") 
     def __str__(self):

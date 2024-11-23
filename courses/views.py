@@ -11,7 +11,7 @@ from drf_yasg import openapi
 from django.core.cache import cache
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
-from courses.tests import IsTeacherOrAdmin
+from courses.permissions import IsTeacherOrAdmin
 from .models import Course, Enrollment
 from .serializers import CourseSerializer, EnrollmentSerializer
 from users.permissions import IsAdmin, IsTeacher

@@ -255,28 +255,7 @@ DJOSER = {
     },
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'main_db',
-        'USER': 'main_user',
-        'PASSWORD': 'main_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    },
-    'analytics': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'analytics_db',
-        'USER': 'analytics_user',
-        'PASSWORD': 'analytics_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
 
-    },
-}
-
-
-DATABASE_ROUTERS = ['analytics.db_router.AnalyticsRouter']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
